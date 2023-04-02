@@ -1,4 +1,4 @@
-# Exemplo simples api OpenAI GPT 3 modelo text-davinci-003
+# Exemplo simples api OpenAI GPT 3 modelo de conclusão de texto
 
 Você escreve uma frase e o modelo gera um texto de resposta.
 

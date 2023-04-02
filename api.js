@@ -45,7 +45,7 @@ Capable of very simple tasks, usually the fastest model
 in the GPT-3 series, and lowest cost.
 */
 
-async function davinci(promptText,tokenSize) {
+async function completionsTextModel(promptText,tokenSize) {
     return await openai.createCompletion({
         model: gptModelName,
         prompt: promptText,
@@ -54,4 +54,4 @@ async function davinci(promptText,tokenSize) {
       });
   }
 
-module.exports = { davinci };
+module.exports = { completionsTextModel };
