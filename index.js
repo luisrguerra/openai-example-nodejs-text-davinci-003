@@ -1,18 +1,9 @@
-require('dotenv').config()
-const { Configuration, OpenAIApi } = require("openai");
-const configuration = new Configuration({
-  apiKey: process.env['OPENAI_API_KEY'],
-});
+const api = require('./api');
 
-const openai = new OpenAIApi(configuration);
+let promptText = "Write a poem";
+let tokenTextSize = 256;
 
 (async() => {
-    const response = await openai.createCompletion({
-        model: "text-davinci-003",
-        prompt: "Say this is a test",
-        temperature: 0,
-        max_tokens: 7,
-      });
-
+    const response = await api.davinci(promptText,tokenTextSize)
     console.log(response.data.choices[0].text);
-  })()
+})()
