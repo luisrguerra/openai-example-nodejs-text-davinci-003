@@ -54,4 +54,9 @@ async function completionsTextModel(promptText,tokenSize) {
       });
   }
 
-module.exports = { completionsTextModel };
+async function generateTextFromApi(promptText,textTokenSize) {
+  const apiResponse = await completionsTextModel(promptText, textTokenSize);
+  return apiResponse.data.choices[0].text;
+}
+
+module.exports = { generateTextFromApi };

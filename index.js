@@ -1,11 +1,6 @@
 const readline = require('readline');
 const api = require('./api');
 
-async function generateTextFromApi(promptText,textTokenSize) {
-    const apiResponse = await api.completionsTextModel(promptText, textTokenSize);
-    return apiResponse.data.choices[0].text;
-}
-
 async function runTerminal() {
     const terminalReader = readline.createInterface({
         input: process.stdin,
@@ -17,7 +12,7 @@ async function runTerminal() {
     });
 
     const textTokenSize = 512;
-    const apiResponseText = await generateTextFromApi(userInput, textTokenSize);
+    const apiResponseText = await api.generateTextFromApi(userInput, textTokenSize);
     console.log("\nResponse:\n" + apiResponseText + "\n");
 
     terminalReader.close();
