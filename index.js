@@ -4,7 +4,7 @@ const api = require('./api');
 async function sendPrompt(promptText, tokenTextSize) {
     const response = await api.davinci(promptText,tokenTextSize)
     const responseText = response.data.choices[0].text;
-    console.log(responseText);
+    console.log("Response:\n" + responseText);
  };
 
 let terminalReader = readline.createInterface({
@@ -13,7 +13,7 @@ let terminalReader = readline.createInterface({
 });
 
 terminalReader.question("Prompt:\n", function(answer) {
-    sendPrompt(answer,256)
+    sendPrompt(answer,512)
     terminalReader.close();
 });
 
