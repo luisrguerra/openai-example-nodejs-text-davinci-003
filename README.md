@@ -36,7 +36,7 @@ Observação: Ao instalar o Node.js no Windows, certifique-se de marcar a opçã
 
 - Para executar o aplicativo use o comando:
   ```
-  npm start
+  node index.js
   ```
 
  
