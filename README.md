@@ -1,6 +1,6 @@
 # Exemplo simples api OpenAI GPT 3 modelo text-davinci-003
 
-Você escreva uma frase e o modelo gera um texto de resposta.
+Você escreve uma frase e o modelo gera um texto de resposta.
 
 ## Principais bibliotecas utilizadas no projeto:
 - openai (api da OpenAI)
