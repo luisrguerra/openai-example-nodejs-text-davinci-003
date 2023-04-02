@@ -1,2 +1,2 @@
-# openaitest
+# openai-example
  
